@@ -1,4 +1,6 @@
 
+import timeit
+
 def multi_number(num, steps):
     """
     :param num: number to be multiplied
@@ -45,8 +47,10 @@ def check_num(num):
 
     return True
 
+start = timeit.default_timer()
 x = 277777788888800
 below_11 = True
+
 while below_11:
 
     #time.sleep(1)
@@ -69,4 +73,10 @@ while below_11:
             record = "Last number check: " + str(x) + "\n"
             print(record)
             file.write(record)
+        # Test Time
+        below_11 = False
     x += 1
+
+stop = timeit.default_timer()
+
+print('Time: ', stop - start)
