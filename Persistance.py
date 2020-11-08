@@ -67,5 +67,6 @@ while below_11:
     if (x % 10000000) == 0:
         with open("nb_step_above_10.txt", 'a') as file:
             record = "Last number check: " + str(x) + "\n"
+            print(record)
             file.write(record)
     x += 1
